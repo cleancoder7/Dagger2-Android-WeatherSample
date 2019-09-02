@@ -8,4 +8,47 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="TextViewSize15Color222222Style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_222222</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="TextViewSize15ColorDD0000Style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_dd0000</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="TextViewSize15Color444444Style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_444444</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="TextViewSize15Color222222BoldStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_222222</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewSize25Color222222BoldStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_222222</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
