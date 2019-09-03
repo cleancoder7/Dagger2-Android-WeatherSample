@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.example.daggerpractice00.ui.common.BindingAdapters" />
+        <variable
+            name="weatherInfo"
+            type="com.example.daggerpractice00.api.response.ShownWeatherInfo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1"
+        android:background="@color/color_fffffff">
+
+        <TextView
+            style="@style/TextViewSize15Color222222Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:background="@drawable/bg_stroke_222222_1"
+            android:text="@{weatherInfo.cityName}"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+            android:weightSum="1"
+            android:background="@drawable/bg_stroke_222222_1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitCenter"
+                    android:WeatherSrc="@{weatherInfo.todayWeather.weatherStateAbbr}"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/TextViewSize15Color222222Style"
+                    android:text="@{weatherInfo.todayWeather.weatherStateName}"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/TextViewSize15ColorDD0000Style"
+                        android:layout_marginRight="1dp"
+                        android:text="@{@string/txt_temp(weatherInfo.todayWeather.theTemp)}"/>
+
+                    <TextView
+                        style="@style/TextViewSize15Color444444Style"
+                        android:text="@{@string/txt_humidity(weatherInfo.todayWeather.humidity.toString)}"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+            android:weightSum="1"
+            android:background="@drawable/bg_stroke_222222_1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitCenter"
+                    android:WeatherSrc="@{weatherInfo.tomorrowWeather.weatherStateAbbr}"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/TextViewSize15Color222222Style"
+                    android:text="@{weatherInfo.tomorrowWeather.weatherStateName}"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/TextViewSize15ColorDD0000Style"
+                        android:layout_marginRight="1dp"
+                        android:text="@{@string/txt_temp(weatherInfo.tomorrowWeather.theTemp)}"/>
+
+                    <TextView
+                        style="@style/TextViewSize15Color444444Style"
+                        android:text="@{@string/txt_humidity(weatherInfo.tomorrowWeather.humidity.toString)}"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

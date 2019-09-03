@@ -3,7 +3,9 @@ package com.example.daggerpractice00.ui;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.daggerpractice00.api.WeatherService;
+import com.example.daggerpractice00.utils.DateUtil;
 import com.example.daggerpractice00.utils.ViewModelProviderFactory;
+import com.google.gson.Gson;
 
 import dagger.Module;
 import dagger.Provides;
@@ -16,7 +18,12 @@ public class MainModule {
     }
 
     @Provides
-    MainRepository provideRepository(WeatherService apiService){
-        return new MainRepository(apiService);
+    MainRepository provideRepository(WeatherService apiService, Gson gson, DateUtil dateUtil){
+        return new MainRepository(apiService, gson, dateUtil);
+    }
+
+    @Provides
+    MainAdapter provideAdapter() {
+        return new MainAdapter();
     }
 }
