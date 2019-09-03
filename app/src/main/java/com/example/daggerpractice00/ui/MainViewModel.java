@@ -26,6 +26,7 @@ public class MainViewModel extends ViewModel {
     public SearchView.OnQueryTextListener onSubmitListener = new SearchView.OnQueryTextListener() {
         @Override
         public boolean onQueryTextSubmit(String query) {
+            clear();
             getLocations(query);
             onLoadingLiveData.postValue(true);
             return false;
@@ -62,6 +63,12 @@ public class MainViewModel extends ViewModel {
             onLoadingLiveData.postValue(false);
         });
 
+    }
+
+    private void clear() {
+        locationLiveData.setValue(new ArrayList<>());
+        weatherLiveData.setValue(new ArrayList<>());
+        mainRepository.clear();
     }
 
 

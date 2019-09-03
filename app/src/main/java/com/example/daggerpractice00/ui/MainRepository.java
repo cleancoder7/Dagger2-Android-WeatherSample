@@ -98,9 +98,7 @@ public class MainRepository {
                             if(woeids.indexOf(woeid) == woeids.size() - 1) {
                                 if(isToday) {
                                     getWeathers(woeids, cityArray, false, weatherCallback);
-                                    return;
                                 }else {
-
                                     List<ShownWeatherInfo> weatherInfos = new ArrayList<>();
 
                                     for(String names : cityNames) {
@@ -130,6 +128,12 @@ public class MainRepository {
             }));
 
         }
+    }
+
+    public void clear() {
+        todays = new ArrayList<>();
+        tomorrows = new ArrayList<>();
+        cityNames = new ArrayList<>();
     }
 
     public interface LocationCallback {
