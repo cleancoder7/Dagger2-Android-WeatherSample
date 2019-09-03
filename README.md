@@ -1,4 +1,4 @@
-# DaggerPractice00
+# Dagger2-Android-WeatherSample
 Dagger Practice. Java + Dagger + Rxjava2 + MVVM
 
 Using Weather API https://www.metaweather.com/
