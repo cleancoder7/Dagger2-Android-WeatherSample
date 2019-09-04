@@ -32,19 +32,16 @@ public class NetworkModule {
     @Singleton
     @Provides
     Retrofit provideRetrofit() {
-        Retrofit retrofit = new Retrofit.Builder()
+
+        return new Retrofit.Builder()
                 .baseUrl(Const.BASE_URL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(providedClient())
                 .build();
-
-        return retrofit;
     }
 
     @Singleton
-
-
     @Provides
     WeatherService provideApiService(Retrofit retrofit){
         return retrofit.create(WeatherService.class);
